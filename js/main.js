@@ -3,10 +3,7 @@
  */
 
 const loadNavbar = () => {
-  const isRoot = window.location.pathname.endsWith('index.html') || 
-                 window.location.pathname === '/' || 
-                 window.location.pathname.endsWith('/Website/');
-                 window.location.pathname.endsWith('/attili-associates/');
+  const isRoot = !window.location.pathname.includes('/pages/');
   
   const toPages = isRoot ? 'pages/' : '';
   const toHome = isRoot ? 'index.html' : '../index.html';
